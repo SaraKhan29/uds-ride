@@ -1,0 +1,22 @@
+:host
+  {
+
+    .page-bg-cstm {
+      --background: url("../../assets/img/pageBg.jpg") no-repeat center/cover fixed;
+    }
+
+    .cstm-input-swap-small {
+      --border-radius: 50%;
+      width: 40pt;
+      height: 40pt;
+      margin: 10pt auto;
+      display: block;
+    }
+
+    #seats {
+      max-width: 20%;
+      position: absolute;
+      right: 20px;
+      text-align: right;
+    }
+  }

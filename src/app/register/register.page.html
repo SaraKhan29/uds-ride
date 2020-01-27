@@ -1,0 +1,92 @@
+<ion-content fullscreen class="page-bg-cstm" padding>
+	<div class="wrapper-logo-cre-cstm">
+		<img src="../../assets/img/pagelogo.png" class="logo-login-cstm" />
+	</div>
+
+	<h4 class="credentials-title-cstm">Register Today & Travel Free</h4>
+
+	<form #form="ngForm" (ngSubmit)="register()" novalidate>
+		<div class="input-wrapper-cstm">
+			<ion-input
+				name="email"
+				type="email"
+				inputmode="email"
+				pattern="^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+\.)?[a-zA-Z]+\.)?(stud.uni-saarland|uni-saarland|mpi-inf.mpg)\.de$"
+				[(ngModel)]="email"
+				id="id_email"
+				#name="ngModel"
+				placeholder="Enter Email"
+				clearInput
+				required
+			></ion-input>
+		</div>
+
+		<div class="forget-passwrd-cstm">
+			<ion-button color="primary" fill="clear" (click)="acceptedEmails()">
+				View accepted emails
+			</ion-button>
+		</div>
+
+		<ion-grid class="terms-conditions-grid">
+			<ion-row>
+				<ion-col size="1">
+					<ion-checkbox
+						[(ngModel)]="terms"
+						name="terms"
+						required="true"
+						color="primary"
+						id="id_terms"
+					></ion-checkbox>
+				</ion-col>
+				<ion-col size="11">
+					<ion-item lines="none">
+						<ion-label>
+							I agree and accept <br />
+							<ion-button
+								color="primary"
+								fill="clear"
+								(click)="termsConditions()"
+							>Terms and Conditions</ion-button>
+						</ion-label>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+
+			<ion-row>
+				<ion-col size="1">
+					<ion-checkbox
+						id="id_policy"
+						name="policy"
+						[(ngModel)]="policy"
+						required="true"
+						color="primary"
+					></ion-checkbox>
+				</ion-col>
+				<ion-col size="11">
+					<ion-item lines="none">
+						<ion-label>
+							I agree and accept <br />
+							<ion-button color="primary" fill="clear" (click)="dataPolicy()">
+								Privacy & Data Processing Policy
+							</ion-button>
+						</ion-label>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</form>
+	<div class="">
+		<div class="already-account-cstm">
+			<a href="/login">Already have an Account?</a>
+		</div>
+		<ion-button
+			color="primary"
+			mode="ios"
+			id="id_register_btn"
+			[disabled]="!form.valid"
+			type="submit"
+			expand="block"
+			(click)="register()"
+		>Register</ion-button>
+	</div>
+</ion-content>

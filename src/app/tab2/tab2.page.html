@@ -1,0 +1,44 @@
+<ion-header class="cstm-ion-header ion-padding">
+	<div class="wrapper-logo-nav-cstm">
+		<img src="../../assets/img/pagelogo.png" class="logo-login-cstm">
+	</div>
+</ion-header>
+<ion-content class="ion-padding page-bg-cstm">
+	<h3>Search a ride</h3>
+
+	<div class="dropdown-wrapper-cstm">
+		<ion-item id="startLocation">
+			<ion-label position="floating">From</ion-label>
+			<ionic-selectable
+				[(ngModel)]="stop1"
+				[items]="fromCampus ? stops2 : stops1"
+				itemValueField="id"
+				itemTextField="nameWithDistance"
+				[canSearch]="!fromCampus"
+			></ionic-selectable>
+		</ion-item>
+	</div>
+
+	<div>
+		<ion-button color="primary" class="cstm-input-swap" size="large" (click)="onSwap()">
+			<ion-icon name="git-compare"></ion-icon>
+		</ion-button>
+	</div>
+
+	<div class="dropdown-wrapper-cstm">
+		<ion-item value="notifications" interface="action-sheet" id="endLocation">
+			<ion-label position="floating">To</ion-label>
+			<ionic-selectable
+				[(ngModel)]="stop2"
+				[items]="fromCampus ? stops1 : stops2"
+				itemValueField="id"
+				itemTextField="nameWithDistance"
+				[canSearch]="fromCampus"
+			></ionic-selectable>
+		</ion-item>
+	</div>
+
+	<div class="cstm-pagger-top-botm">
+		<ion-button id="searchbtn" color="primary" expand="block" (click)="goToSearchResults()">Search Ride</ion-button>
+	</div>
+</ion-content>

@@ -1,0 +1,81 @@
+<ion-header class="cstm-ion-header ion-padding">
+	<div class="wrapper-logo-nav-cstm">
+		<img src="../../assets/img/pagelogo.png" class="logo-login-cstm">
+	</div>
+
+	<div class="header-top-nav-cstm"></div>
+</ion-header>
+
+<ion-content class="ion-padding page-bg-cstm" *ngIf="user">
+	<img src="../../assets/img/blank-profile.png" class="user-profile-picture" />
+	<h3>My profile</h3>
+	<div class="general_info" *ngIf="profile != undefined">
+		<ion-list class="input-list-wrapper-cstm">
+			<ion-item>
+				<ion-label position="floating" for="firstNameInput">First name</ion-label>
+				<ion-input
+					id="firstName"
+					name="firstNameInput"
+					placeholder="First name"
+					[(ngModel)]="profile.first_name"
+				></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="floating" for="lastNameInput">Last name</ion-label>
+				<ion-input
+					id="lastName"
+					name="lastNameInput"
+					placeholder="Last name"
+					[(ngModel)]="profile.last_name"
+				></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="floating" for="phoneInput">Phone number</ion-label>
+				<ion-input
+					id="phoneNumber"
+					type="tel"
+					placeholder="Phone number"
+					[(ngModel)]="profile.phone"
+				></ion-input>
+			</ion-item>
+		</ion-list>
+		<ion-button id="save_profile" color="primary" expand="block" (click)="saveProfile()">
+			<ion-icon slot="start" name="save"></ion-icon> Save Profile
+		</ion-button>
+	</div>
+	<div class="loading" *ngIf="profile == undefined">
+		Loading...
+	</div>
+	<h3>My cars</h3>
+	<div class="cars" *ngIf="cars != undefined">
+		<ion-list class="input-list-wrapper-cstm">
+			<ion-item *ngFor="let car of cars" (click)="editCar(car)" href="javascript:void(0)">
+				<ion-label>
+					<h2>{{ car.name }}</h2>
+					<p>{{ car.brand }} {{ car.model }}</p>
+				</ion-label>
+			</ion-item>
+		</ion-list>
+		<ion-button id="add_car" expand="block" (click)="createCar()">
+			<ion-icon slot="start" name="add"></ion-icon> Add car
+		</ion-button>
+	</div>
+	<div class="loading" *ngIf="cars == undefined">
+		Loading...
+	</div>
+	<h3>My account</h3>
+	<div class="account">
+		<ion-button id="id_logout" expand="block" (click)="logOut()">
+			<ion-icon slot="start" name="log-out"></ion-icon> Sign out
+		</ion-button>
+		<ion-button id="id_delete" expand="block" color="danger" (click)="deleteUser()">
+			<ion-icon slot="start" name="trash"></ion-icon> Delete account
+		</ion-button>
+	</div>
+	<h3>Help</h3>
+	<div class="help">
+		<ion-button expand="block" href="mailto:email@example.com">
+			<ion-icon slot="start" name="mail"></ion-icon> Contact AStA
+		</ion-button>
+	</div>
+</ion-content>

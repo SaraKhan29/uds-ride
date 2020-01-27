@@ -1,0 +1,62 @@
+<ion-header class="cstm-ion-header ion-padding">
+	<div class="wrapper-logo-nav-cstm">
+		<img src="../../assets/img/pagelogo.png" class="logo-login-cstm">
+	</div>
+
+	<div class="header-top-nav-cstm">
+		<ion-toolbar>
+			<h3 slot="secondary">My Rides</h3>
+
+			<ion-buttons slot="primary" class="primary">
+				<ion-icon name="add-circle" size="large" class="primary-icon-cstm"></ion-icon>
+			</ion-buttons>
+		</ion-toolbar>
+	</div>
+</ion-header>
+
+<ion-content class=" page-bg-cstm">
+	<div>
+		<ion-segment [(ngModel)]="choice" class="ion-padding" scrollable>
+			<ion-segment-button class="seg-button-custm" value="offer ride" checked>
+				Offer Ride
+			</ion-segment-button>
+			<ion-segment-button class="seg-button-custm" value="ride with">
+				Ride with
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+	<div [ngSwitch]="choice" checked>
+		<ion-card *ngSwitchCase="'offer ride'">
+			<ion-item color="danger">
+				<ion-label>
+					Please register your car to offer ride
+				</ion-label>
+			</ion-item>
+
+			<ion-card-content>
+				<ion-button color="primary" expand="block" size="medium" (click)="RegisterCar()">
+					Register My Car
+				</ion-button>
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngSwitchCase="'ride with'">
+			<ion-item color="warning">
+				<ion-label>
+					You have not booked any ride.
+				</ion-label>
+			</ion-item>
+
+			<ion-card-content>
+				<ion-button color="primary" expand="block" size="medium" (click)="RegisterCar()">
+					Search ride
+				</ion-button>
+			</ion-card-content>
+		</ion-card>
+	</div>
+
+	<div>
+		<h2>Important Note for Devs</h2>
+		<p>This is a failure case. Please check page "my-rides-success" for success case</p>
+	</div>
+</ion-content>

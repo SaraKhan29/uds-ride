@@ -1,0 +1,141 @@
+<ion-header class="cstm-ion-header ion-padding">
+	<div class="wrapper-logo-nav-cstm">
+		<img src="../../assets/img/pagelogo.png" class="logo-login-cstm" />
+	</div>
+
+	<div class="header-top-nav-cstm">
+		<ion-toolbar>
+			<ion-buttons slot="secondary">
+				<ion-button color="primary" fill="clear" (click)="navCtrl.back()">
+					<ion-icon name="arrow-back"></ion-icon> Back
+				</ion-button>
+			</ion-buttons>
+		</ion-toolbar>
+		<h3 slot="secondary" *ngIf="!creating">Edit Ride</h3>
+		<h3 slot="secondary" *ngIf="creating">Create Ride</h3>
+	</div>
+</ion-header>
+
+<ion-spinner *ngIf="!user || !rideData" style="margin:auto"></ion-spinner>
+
+<ion-content class="page-bg-cstm ion-padding" *ngIf="user && rideData">
+
+	<div class="ride-ranger-select">
+		<h5>General</h5>
+		<ion-item class="item-wrapper-cstm">
+			<ion-label>Seats offered</ion-label>
+			<ion-input
+				id="seats"
+				type="number"
+				value="1"
+				min="1"
+				[max]="selectedCar.seats"
+				[(ngModel)]="rideData.available_seats"
+			></ion-input>
+		</ion-item>
+
+		<ion-item class="item-wrapper-cstm">
+			<ion-label position="floating">Select Car</ion-label>
+			<ion-select
+				id="select_car"
+				okText="Select"
+				cancelText="Dismiss"
+				[(ngModel)]="rideData.car"
+				(ionChange)="updateSelectedCar()"
+			>
+				<ion-select-option *ngFor="let car of cars" value="{{car.id}}">
+					{{car.name}} ({{car.brand}} {{car.model}})
+				</ion-select-option>
+			</ion-select>
+		</ion-item>
+	</div>
+
+	<h5>Date & Time</h5>
+	<div class="ride-ranger-select">
+		<ion-item class="item-wrapper-cstm">
+			<ion-label>Ride Date</ion-label>
+			<ion-datetime
+				id="ride_date"
+				displayFormat="MMMM DD, YYYY"
+				placeholder="Please select"
+				[(ngModel)]="rideData.date"
+				[min]="date"
+			></ion-datetime>
+		</ion-item>
+
+		<ion-item class="item-wrapper-cstm">
+			<ion-label>Ride Start Time</ion-label>
+			<ion-datetime
+				id="start_time"
+				displayFormat="HH:mm"
+				placeholder="HH:MM"
+				[(ngModel)]="rideData.start_time"
+				[min]="date"
+			></ion-datetime>
+		</ion-item>
+
+		<ion-item class="item-wrapper-cstm">
+			<ion-label>Ride End Time</ion-label>
+			<ion-datetime
+				id="end_time"
+				displayFormat="HH:mm"
+				placeholder="HH:MM"
+				[(ngModel)]="rideData.end_time"
+				[min]="rideData.start_time"
+			></ion-datetime>
+		</ion-item>
+	</div>
+
+	<h5>Route</h5>
+	<div class="ride-ranger-select">
+		<ion-item class="item-wrapper-cstm">
+			<ion-label position="floating">From</ion-label>
+			<ionic-selectable
+				id="ride_from"
+				[(ngModel)]="startLocation"
+				[items]="fromCampus ? campusStops : outsideStops"
+				itemValueField="id"
+				itemTextField="nameWithDistance"
+				[canSearch]="!fromCampus"
+			></ionic-selectable>
+		</ion-item>
+
+		<ion-button color="primary" class="cstm-input-swap-small" (click)="onSwap()">
+			<ion-icon name="git-compare"></ion-icon>
+		</ion-button>
+
+		<ion-item class="item-wrapper-cstm">
+			<ion-label position="floating">To</ion-label>
+			<ionic-selectable
+				id="ride_to"
+				[(ngModel)]="endLocation"
+				[items]="fromCampus ? outsideStops : campusStops"
+				itemValueField="id"
+				itemTextField="nameWithDistance"
+				[canSearch]="fromCampus"
+			></ionic-selectable>
+		</ion-item>
+	</div>
+
+	<h5>Notes</h5>
+	<div class="input-wrapper-cstm">
+		<ion-textarea
+			[(ngModel)]="rideData.note"
+			rows=10
+			maxlength=1000
+			placeholder="You can add a note"
+		></ion-textarea>
+	</div>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar>
+		<ion-button
+			id="id_btn"
+			color="primary"
+			expand="block"
+			size="medium"
+			(click)="saveRide()"
+		>{{creating ? 'Offer Ride' : 'Save'}}</ion-button>
+	</ion-toolbar>
+</ion-footer>

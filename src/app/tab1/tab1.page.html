@@ -1,0 +1,211 @@
+<ion-header class="cstm-ion-header ion-padding">
+	<div class="wrapper-logo-nav-cstm">
+		<img src="../../assets/img/pagelogo.png" class="logo-login-cstm">
+	</div>
+
+	<div class="header-top-nav-cstm">
+		<ion-toolbar>
+			<h3 slot="start">My Rides</h3>
+			<ion-buttons slot="primary" class="end" *ngIf="myCars.length">
+				<ion-button color="primary" fill="clear" expand="block" (click)="navControl.navigateForward('/create-ride/42')">
+					<ion-icon name="add-circle" size="large" class="primary-icon-cstm"></ion-icon>
+				</ion-button>
+			</ion-buttons>
+		</ion-toolbar>
+	</div>
+</ion-header>
+
+<ion-content class="page-bg-cstm">
+	<div>
+		<ion-segment [(ngModel)]="choice" class="ion-padding" scrollable>
+			<ion-segment-button class="seg-button-custm" value="offer ride" checked>
+				Offered rides
+			</ion-segment-button>
+			<ion-segment-button id="bookedrides" class="seg-button-custm" value="ride with">
+				Booked rides
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+
+	<div [ngSwitch]="choice" checked>
+		<div *ngSwitchCase="'offer ride'">
+			<ion-card *ngIf="myCars === undefined || myCars.length === 0">
+				<ion-item color="danger">
+					<ion-label>
+						Please register your car
+					</ion-label>
+				</ion-item>
+
+				<ion-card-content>
+					In order to offer a ride, you first need to register your car.
+					<ion-button
+						color="primary"
+						expand="block"
+						size="medium"
+						(click)="createCar();"
+					>Register My Car</ion-button>
+				</ion-card-content>
+			</ion-card>
+
+			<ion-card *ngIf="myCars?.length > 0 && offeredRides.length === 0">
+				<ion-item color="warning">
+					<ion-label color="dark">
+						No offered rides
+					</ion-label>
+				</ion-item>
+
+				<ion-card-content>
+					You have not offered any rides yet.
+					<ion-button
+						color="primary"
+						expand="block"
+						size="medium"
+						(click)="navControl.navigateForward('create-ride/42')"
+					>Offer a ride</ion-button>
+				</ion-card-content>
+			</ion-card>
+
+			<ion-card *ngFor="let ride of offeredRides">
+				<ion-card-content *ngIf="ride.loading">
+					<ion-spinner></ion-spinner> Loading...
+				</ion-card-content>
+				<ion-card-content *ngIf="!ride.loading" class="card-content-cstm">
+					<ion-grid>
+						<ion-row>
+							<ion-col size="3">
+								<div class="search-ride-card-cstm">
+									<ion-img src="../assets/img/ride.svg"></ion-img>
+								</div>
+							</ion-col>
+							<ion-col size="9">
+								<ion-card-title>
+									{{ride.availableSeats}} / {{ride.data.available_seats}} seats left
+								</ion-card-title>
+								<ion-card-subtitle>
+									{{ride.getAcceptedBookings().length}} passenger(s)
+								</ion-card-subtitle>
+								<ion-card-subtitle>
+									{{ride.getRequests().length}} open request(s)
+								</ion-card-subtitle>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+
+					<ion-grid *ngIf="ride.startStop && ride.endStop">
+						<ion-row>
+							<ion-col size="6">
+								<ion-icon name="car" size="large"></ion-icon>
+								<ion-card-subtitle class="align-center">{{ride.startStop.name}}</ion-card-subtitle>
+							</ion-col>
+							<ion-col size="6">
+								<ion-icon name="flag" size="large"></ion-icon>
+								<ion-card-subtitle class="align-center">{{ride.endStop.name}}</ion-card-subtitle>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+
+					<ion-grid>
+						<ion-row>
+							<ion-col size="6">
+								<ion-icon name="calendar" size="large"></ion-icon>
+								<ion-card-subtitle class="align-center">
+									{{ride.data.date | date:'longDate'}}
+								</ion-card-subtitle>
+							</ion-col>
+							<ion-col size="6">
+								<ion-icon name="time" size="large"></ion-icon>
+								<ion-card-subtitle class="align-center">
+									{{ride.data.start_time | date:'H:mm' }} - {{ride.data.end_time | date:'H:mm' }}
+								</ion-card-subtitle>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+					<ion-button id="id_btn" color="primary" expand="block" size="small" (click)="routeToDetails(ride)">View Details</ion-button>
+				</ion-card-content>
+			</ion-card>
+		</div>
+
+		<div *ngSwitchCase="'ride with'">
+			<ion-card *ngIf="bookedRides === undefined || !bookedRides.length">
+				<ion-item color="warning">
+					<ion-label color="dark">
+						You have not booked any rides.
+					</ion-label>
+				</ion-item>
+
+				<ion-card-content>
+					<ion-button color="primary" expand="block" size="medium"
+						(click)="navControl.navigateForward('tabs/tab2')">Search for a ride</ion-button>
+				</ion-card-content>
+			</ion-card>
+
+			<ion-card *ngFor="let ride of bookedRides">
+				<ion-card-content class="card-content-cstm">
+					<ion-grid width="12">
+						<ion-row [ngSwitch]="ride.getMyBooking().status">
+							<ion-col size="2">
+								<div class="search-ride-card-cstm">
+									<ion-img src="../assets/img/ride.svg"></ion-img>
+								</div>
+							</ion-col>
+							<ion-col size="6">
+								<ion-card-title>{{ ride.driver.first_name }} {{ ride.driver.last_name }}</ion-card-title>
+								<ion-card-subtitle>{{ride.car?.brand}} {{ride.car?.model}}</ion-card-subtitle>
+							</ion-col>
+							
+							<ion-col *ngSwitchCase="'accepted'" size="4">
+								<ion-icon name="checkmark-circle" size="large" color="success"></ion-icon>
+								<ion-card-subtitle class="align-center">Passenger</ion-card-subtitle>
+							</ion-col>
+							<ion-col *ngSwitchCase="'request'" size="4">
+								<ion-icon name="time" size="large" color="warning"></ion-icon>
+								<ion-card-subtitle class="align-center">Pending</ion-card-subtitle>
+							</ion-col>
+							<ion-col *ngSwitchCase="'rejected'" size="4">
+								<ion-icon name="close-circle" size="large" color="danger"></ion-icon>
+								<ion-card-subtitle class="align-center">Rejected</ion-card-subtitle>
+							</ion-col>
+							<ion-col *ngSwitchCase="'canceled'" size="4">
+								<ion-icon name="close-circle" size="large" color="danger"></ion-icon>
+								<ion-card-subtitle class="align-center">Canceled</ion-card-subtitle>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+					
+					<ion-grid *ngIf="ride.startStop && ride.endStop">
+						<ion-row>
+							<ion-col size="6">
+								<ion-icon name="car" size="large"></ion-icon>
+								<ion-card-subtitle class="align-center">{{ride.startStop.name}}</ion-card-subtitle>
+							</ion-col>
+							<ion-col size="6">
+								<ion-icon name="flag" size="large"></ion-icon>
+								<ion-card-subtitle class="align-center">{{ride.endStop.name}}</ion-card-subtitle>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+
+					<ion-grid>
+						<ion-row>
+							<ion-col size="6">
+								<ion-icon name="calendar" size="large"></ion-icon>
+								<ion-card-subtitle class="align-center">
+									{{ride.data.date | date:'MM/dd/yyyy'}}
+								</ion-card-subtitle>
+							</ion-col>
+							<ion-col size="6">
+								<ion-icon name="time" size="large"></ion-icon>
+								<ion-card-subtitle class="align-center">
+									{{ride.data.start_time | date:'H:mm' }} - {{ride.data.end_time | date:'H:mm' }}
+								</ion-card-subtitle>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+					<ion-button id="viewdetails" color="primary" expand="block" size="small" (click)=routeToRideWithDetails(ride)>
+						View Details
+					</ion-button>
+				</ion-card-content>
+			</ion-card>
+		</div>
+	</div>
+</ion-content>

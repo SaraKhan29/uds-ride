@@ -1,0 +1,25 @@
+:host
+  {
+
+    .page-bg-cstm {
+      --background: url("../../assets/img/pageBg.jpg") no-repeat center/cover fixed;
+    }
+
+.input-wrapper-cstm{
+  background-color: #fff;
+border-radius: 30px 30px 0px 30px;
+padding: 5px;
+padding-left: 15pt;
+-webkit-box-shadow: 0px 0px 40px 1px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 0px 40px 1px rgba(0,0,0,0.1);
+box-shadow: 0px 0px 40px 1px rgba(0,0,0,0.1);
+}
+
+
+    @media (max-height: 500px) {
+      .wrapper-footer-actions-cstm {
+        position: relative;
+      }
+    }
+
+  }

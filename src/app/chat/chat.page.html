@@ -1,0 +1,75 @@
+<ion-header class="cstm-ion-header ion-padding">
+	<div class="wrapper-logo-nav-cstm">
+		<img src="../../assets/img/pagelogo.png" class="logo-login-cstm" />
+	</div>
+
+	<div class="header-top-nav-cstm">
+		<ion-toolbar>
+			<ion-buttons slot="start">
+				<ion-button (click)="navCtrl.back()">
+					<ion-icon slot="start" name="arrow-back"></ion-icon> Back
+				</ion-button>
+			</ion-buttons>
+			<ion-title>Chat</ion-title>
+		</ion-toolbar>
+	</div>
+</ion-header>
+
+
+<ion-content class="page-bg-cstm ion-padding" fullscreen="true">
+	<div *ngIf="!user || !messagesLoaded">
+		Loading...
+	</div>
+	<div *ngIf="user && messagesLoaded">
+		<ion-card class="chat-owner-identifier">
+			<ion-card-content class="chat-owner-identifier-content">
+				<ion-list>
+					<ion-item lines="none">
+						<ion-label>Driver: {{ride.driver.first_name}} {{ride.driver.last_name}}</ion-label>
+						<ion-badge slot="end">{{ride.data.date | date: 'dd. MM. yyyy'}}</ion-badge>
+					</ion-item>
+				</ion-list>
+			</ion-card-content>
+		</ion-card>
+
+		<ion-list style="margin-bottom: 90px">
+			<ion-item *ngFor="let message of messages">
+				<ion-grid>
+					<ion-row>
+						<ion-col size="3" offset-15>
+							<ion-avatar>
+								<img src="../../assets/img/blank-profile.png">
+							</ion-avatar>
+							<ion-button color="danger" (click)="deleteMessage(message)"
+								*ngIf="message.author && message.author.id === user.uid">
+								<ion-icon name="trash"></ion-icon>
+							</ion-button>
+						</ion-col>
+
+						<ion-col size="9">
+							<h5 *ngIf="message.author">{{message.author.first_name}} {{message.author.last_name}}</h5>
+							<h6 *ngIf="!message.author">Loading...</h6>
+							<p>{{message.content}}</p>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+
+<ion-footer>
+	<ion-grid>
+		<ion-row>
+			<ion-col size="9">
+				<ion-textarea placeholder="Write something" [(ngModel)]="messageDraft" class="chat-input-area">
+				</ion-textarea>
+			</ion-col>
+			<ion-col size="3">
+				<ion-button (click)="sendMessage()" class="send-msg-chat-btn">
+					<ion-icon slot="start" name="send" class="send-msg-chat-btn-icon"></ion-icon>
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-footer>

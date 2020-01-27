@@ -1,0 +1,75 @@
+
+:host {
+ion-slides{
+  height:100%;
+}
+
+.bg-cstm {
+  --background: url("../../assets/img/loginSliderBg.jpg") no-repeat center/cover fixed;
+}
+.logo-login-cstm {
+width:50%;
+margin: 0 auto;
+display: block;
+}
+.wrapper-logo-login-cstm {
+  width: 100%;
+  clear: both;
+  float: left;
+  position: absolute;
+  top: 25%;
+
+}
+
+.logo-login-text-cstm {
+  margin-top: 15%;
+      margin-bottom: 10%;
+      width: 100%;
+      clear: both;
+      float: left;
+      position: absolute;
+}
+.logo-login-text-cstm h2 {
+  color: #fff;
+  text-align: left;
+      padding: 5%;
+}
+
+.wrapper-logo-actions-cstm{
+
+  position: absolute;
+bottom: 1%;
+left: 0;
+width: 100%;
+align-items: center;
+    padding: 5%;
+    z-index: 999999;
+
+}
+.slider-knobs-cstm{
+  color: #fff
+}
+.wrapper-slider-knobs-cstm {
+  margin-top: 40%;
+width: 100%;
+clear: both;
+float: left;
+position: absolute;
+}
+
+.slides-padder-cstm {
+  padding: 5%;
+}
+
+.wrapper-loggingin-cstm{
+
+  position: absolute;
+bottom: 1%;
+left: 0;
+width: 100%;
+text-align: center;
+    padding: 5%;
+    z-index: 999999;
+}
+
+}

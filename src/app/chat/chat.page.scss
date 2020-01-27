@@ -1,0 +1,37 @@
+:host
+  {
+
+    .page-bg-cstm {
+      --background: url("../../assets/img/pageBg.jpg") no-repeat center/cover fixed;
+    }
+
+  
+.chat-input-area{
+    background-color: white;
+    border-radius: 40px;
+   
+    border: 1px solid #006df0;
+   
+    padding-left: 10px;
+}
+.send-msg-chat-btn {
+    max-width: 70px;
+    min-width: 70px;
+    text-align: center;
+}
+.send-msg-chat-btn-icon {
+    margin: 0 auto; 
+}
+.chat-owner-identifier {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.chat-owner-identifier-content {
+    padding: 0px;
+}
+   
+
+
+  }

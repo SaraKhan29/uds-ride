@@ -1,0 +1,210 @@
+[
+	{
+		"name": "Hauptbahnhof",
+		"id": "hbf",
+		"campus": false,
+		"latitude": 49.2403054,
+		"longitude": 6.9897844,
+		"neighboringStops": ["waldhaus"]
+	},
+	{
+		"name": "Rathaus",
+		"id": "rathaus",
+		"campus": false,
+		"latitude": 49.2348140,
+		"longitude": 6.9960530,
+		"neighboringStops": ["waldhaus"]
+	},
+	{
+		"name": "Waldhaus",
+		"id": "waldhaus",
+		"campus": false,
+		"latitude": 49.2465370,
+		"longitude": 7.0216728,
+		"neighboringStops": ["rathaus", "hbf", "uni_sued"]
+	},
+	{
+		"name": "Universität Süd",
+		"id": "uni_sued",
+		"campus": true,
+		"latitude": 49.2547,
+		"longitude": 7.03673,
+		"neighboringStops": ["sportschule"]
+	},
+	{
+		"name": "Universität Nord",
+		"id": "uni_nord",
+		"campus": true,
+		"latitude": 49.25788,
+		"longitude": 7.04164,
+		"neighboringStops": ["sportschule"]
+	},
+	{
+		"name": "Universität Ost",
+		"id": "uni_ost",
+		"campus": true,
+		"latitude": 49.25767,
+		"longitude": 7.04764,
+		"neighboringStops": ["stuhlsatzenhaus"]
+	},
+	{
+		"name": "Stuhlsatzenhaus",
+		"id": "stuhlsatzenhaus",
+		"campus": true,
+		"latitude": 49.25909,
+		"longitude": 7.05166,
+		"neighboringStops": ["uni_ost", "dud_guckelsberg"]
+	},
+	{
+		"name": "Dudweiler Guckelsberg",
+		"id": "dud_guckelsberg",
+		"campus": false,
+		"latitude": 49.26458,
+		"longitude": 7.04994,
+		"neighboringStops": ["stuhlsatzenhaus", "dud_hermann_loens"]
+	},
+	{
+		"name": "Dudweiler Hermann-Löns-Straße",
+		"id": "dud_hermann_loens",
+		"campus": false,
+		"latitude": 49.26774,
+		"longitude": 7.04593,
+		"neighboringStops": ["dud_guckelsberg", "dud_weisenstein"]
+	},
+	{
+		"name": "Dudweiler Beim Weisenstein",
+		"id": "dud_weisenstein",
+		"campus": false,
+		"latitude": 49.27157,
+		"longitude": 7.04149,
+		"neighboringStops": ["dud_hermann_loens", "dud_buergerhaus"]
+	},
+	{
+		"name": "Dudweiler Bürgerhaus",
+		"id": "dud_buergerhaus",
+		"campus": false,
+		"latitude": 49.27395,
+		"longitude": 7.04019,
+		"neighboringStops": ["dud_weisenstein", "dud_markt"]
+	},
+	{
+		"name": "Dudweiler Markt",
+		"id": "dud_markt",
+		"campus": false,
+		"latitude": 49.27548,
+		"longitude": 7.03592,
+		"neighboringStops": ["dud_buergerhaus", "dud_dudoplatz"]
+	},
+	{
+		"name": "Dudweiler Dudoplatz",
+		"id": "dud_dudoplatz",
+		"campus": false,
+		"latitude": 49.27665,
+		"longitude": 7.03320,
+		"neighboringStops": ["dud_markt"]
+	},
+	{
+		"name": "Landessportschule",
+		"id": "sportschule",
+		"campus": true,
+		"latitude": 49.25245,
+		"longitude": 7.03287,
+		"neighboringStops": ["uni_sued", "uni_nord", "wildpark"]
+	},
+	{
+		"name": "Saarbrücken Wildpark",
+		"id": "wildpark",
+		"campus": false,
+		"latitude": 49.24881,
+		"longitude": 7.02612,
+		"neighboringStops": ["sportschule", "waldhaus"]
+	},
+	{
+		"name": "Saarbrücken Prinzenweiher/DJH",
+		"id": "prinzenweiher",
+		"campus": false,
+		"latitude": 49.24359,
+		"longitude": 7.01192,
+		"neighboringStops": ["waldhaus", "an_der_trift"]
+	},
+	{
+		"name": "Saarbrücken An der Trift",
+		"id": "an_der_trift",
+		"campus": false,
+		"latitude": 49.24185,
+		"longitude": 7.00723,
+		"neighboringStops": ["prinzenweiher", "brauerstrasse"]
+	},
+	{
+		"name": "Saarbrücken Brauerstraße",
+		"id": "brauerstrasse",
+		"campus": false,
+		"latitude": 49.24037,
+		"longitude": 7.00043,
+		"neighboringStops": ["an_der_trift", "haus_der_zukunft"]
+	},
+	{
+		"name": "Saarbrücken Haus der Zukunft",
+		"id": "haus_der_zukunft",
+		"campus": false,
+		"latitude": 49.23818,
+		"longitude": 6.99762,
+		"neighboringStops": ["brauerstrasse", "rathaus", "johanneskirche", "stadtbad"]
+	},
+	{
+		"name": "Saarbrücken Stadtbad",
+		"id": "stadtbad",
+		"campus": false,
+		"latitude": 49.23947,
+		"longitude": 6.99519,
+		"neighboringStops": ["haus_der_zukunft", "hbf"]
+	},
+	{
+		"name": "Saarbrücken Johanneskirche",
+		"id": "johanneskirche",
+		"campus": false,
+		"latitude": 49.23682,
+		"longitude": 6.99667,
+		"neighboringStops": ["haus_der_zukunft", "rathaus"]
+	},
+	{
+		"name": "Saarbrücken Rentenversicherung",
+		"id": "rentenversicherung",
+		"campus": false,
+		"latitude": 49.23709,
+		"longitude": 7.00400,
+		"neighboringStops": ["haus_der_zukunft", "preussenstrasse"]
+	},
+	{
+		"name": "Saarbrücken Preußenstraße",
+		"id": "preussenstrasse",
+		"campus": false,
+		"latitude": 49.23810,
+		"longitude": 7.00769,
+		"neighboringStops": ["rentenversicherung", "heimgarten"]
+	},
+	{
+		"name": "Saarbrücken Heimgarten",
+		"id": "heimgarten",
+		"campus": false,
+		"latitude": 49.23860,
+		"longitude": 7.01003,
+		"neighboringStops": ["preussenstrasse", "ilsestrasse"]
+	},
+	{
+		"name": "Saarbrücken Ilsestraße",
+		"id": "ilsestrasse",
+		"campus": false,
+		"latitude": 49.24120,
+		"longitude": 7.01704,
+		"neighboringStops": ["heimgarten", "ilseplatz"]
+	},
+	{
+		"name": "Saarbrücken Ilseplatz",
+		"id": "ilseplatz",
+		"campus": false,
+		"latitude": 49.24240,
+		"longitude": 7.01532,
+		"neighboringStops": ["ilsestrasse", "waldhaus"]
+	}
+]

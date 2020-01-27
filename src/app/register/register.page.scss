@@ -1,0 +1,20 @@
+
+:host {
+ion-checkbox {
+  --border-radius: 50% 50% 0 50% !important;
+}
+.page-bg-cstm {
+  --background: url("../../assets/img/pageBg.jpg") no-repeat center/cover fixed;
+}
+
+ion-item {
+      --background: transparent;
+}
+
+  @media (max-height: 600px) {
+    .wrapper-footer-actions-cstm {
+      position: relative;
+    }
+  }
+
+}

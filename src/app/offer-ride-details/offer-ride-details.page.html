@@ -1,0 +1,222 @@
+<ion-header class="cstm-ion-header ion-padding">
+	<div class="wrapper-logo-nav-cstm">
+		<img src="../../assets/img/pagelogo.png" class="logo-login-cstm">
+	</div>
+
+	<div class="header-top-nav-cstm">
+		<ion-toolbar>
+			<ion-buttons slot="secondary">
+				<ion-button color="primary" fill="clear" (click)="navCtrl.back()">
+					<ion-icon name="arrow-back"></ion-icon> Back
+				</ion-button>
+			</ion-buttons>
+		</ion-toolbar>
+	</div>
+</ion-header>
+
+<ion-content *ngIf="ride != undefined" class="ion-padding page-bg-cstm">
+	<ion-card>
+		<ion-card-content class="card-content-cstm">
+			<ion-grid>
+				<ion-row>
+					<ion-col size="3">
+						<div class="search-ride-card-cstm">
+							<ion-img src="../assets/img/ride.svg"></ion-img>
+						</div>
+					</ion-col>
+					<ion-col size="9">
+						<ion-card-title>{{ride.driver.first_name}} {{ride.driver.last_name}}</ion-card-title>
+						<ion-card-subtitle>{{ride.car?.brand}} {{ride.car?.model}}</ion-card-subtitle>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+
+			<ion-grid *ngIf="ride.startStop && ride.endStop">
+				<ion-row>
+					<ion-col size="6">
+						<ion-icon name="car" size="large"></ion-icon>
+						<ion-card-subtitle class="align-center">{{ride.startStop.name}}</ion-card-subtitle>
+					</ion-col>
+					<ion-col size="6">
+						<ion-icon name="flag" size="large"></ion-icon>
+						<ion-card-subtitle class="align-center">{{ride.endStop.name}}</ion-card-subtitle>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+
+			<ion-grid>
+				<ion-row>
+					<ion-col size="6">
+						<ion-icon name="calendar" size="large"></ion-icon>
+						<ion-card-subtitle class="align-center"> {{ride.data.date | date:'longDate'}}
+						</ion-card-subtitle>
+					</ion-col>
+					<ion-col size="6">
+						<ion-icon name="time" size="large"></ion-icon>
+						<ion-card-subtitle class="align-center">{{ride.data.start_time | date:'H:mm' }} -
+							{{ride.data.end_time | date:'H:mm' }}</ion-card-subtitle>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+
+			<ion-grid>
+				<ion-row>
+					<ion-col size="6">
+						<ion-grid>
+							<ion-row>
+								<ion-col size="2">
+									<div class="search-ride-card-content-cstm">
+										<ion-img src="../assets/img/baby.svg"></ion-img>
+									</div>
+								</ion-col>
+								<ion-col size="10">
+									<ion-icon
+										[hidden]="ride.car?.childseat"
+										name="close-circle"
+										color="danger"
+										size="large"
+									></ion-icon>
+									<ion-icon
+										[hidden]="!ride.car?.childseat"
+										name="checkmark-circle"
+										color="success"
+										size="large"
+									></ion-icon>
+									<p>Child Seat</p>
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+					</ion-col>
+					<ion-col size="6">
+						<ion-grid>
+							<ion-row>
+								<ion-col size="2">
+									<div class="search-ride-card-content-cstm">
+										<ion-img src="../assets/img/handi.svg"></ion-img>
+									</div>
+								</ion-col>
+								<ion-col size="10">
+									<ion-icon
+										[hidden]="ride.car?.wheelchair"
+										name="close-circle"
+										color="danger"
+										size="large"
+									></ion-icon>
+									<ion-icon
+										[hidden]="!ride.car?.wheelchair"
+										name="checkmark-circle"
+										color="success"
+										size="large"
+									></ion-icon>
+									<p>Wheel Chair</p>
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+					</ion-col>
+					<ion-col size="12">
+						<ion-grid>
+							<ion-row>
+								<ion-col>
+									<div class="search-ride-card-content-cstm">
+										<ion-img src="../assets/img/seat.svg"></ion-img>
+									</div>
+								</ion-col>
+								<ion-col size="8">
+									Seats: {{ride.availableSeats}} / {{ride.data.available_seats}}
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+
+			<ion-grid>
+				<p class="align-justify">Note</p>
+				<p class="align-justify">{{ride.data.note}}</p>
+			</ion-grid>
+		</ion-card-content>
+	</ion-card>
+
+	<h1>Bookings</h1>
+	<p *ngIf="!ride.bookings.length">Nobody has booked this ride yet.</p>
+
+	<ion-card *ngFor="let booking of ride.bookings">
+		<ion-card-content>
+			<ion-grid [ngSwitch]="booking.status">
+				<ion-row>
+					<ion-col size="3">
+						<div>
+							<ion-img src="../assets/img/blank-profile.png"></ion-img>
+						</div>
+					</ion-col>
+					<ion-col size="9">
+						<ion-card-title>
+							{{booking.passenger.first_name}} {{booking.passenger.last_name}}
+						</ion-card-title>
+						<ion-card-subtitle *ngSwitchCase="'accepted'">Passenger</ion-card-subtitle>
+						<ion-card-subtitle *ngSwitchCase="'request'">Booking request</ion-card-subtitle>
+						<ion-card-subtitle *ngSwitchCase="'rejected'">Rejected booking request</ion-card-subtitle>
+						<ion-card-subtitle *ngSwitchCase="'canceled'">Canceled booking</ion-card-subtitle>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col>
+						From<br>{{booking.startStop.name}}
+					</ion-col>
+					<ion-col>
+						To<br>{{booking.endStop.name}}
+					</ion-col>
+				</ion-row>
+				<ion-row *ngSwitchCase="'request'">
+					<ion-col>
+						<ion-button color="success" (click)="acceptBooking(booking)">Accept</ion-button>
+					</ion-col>
+					<ion-col>
+						<ion-button color="danger" (click)="rejectBooking(booking)">Reject</ion-button>
+					</ion-col>
+				</ion-row>
+				<ion-row *ngSwitchCase="'rejected'">
+					<ion-col>
+						<ion-button color="success" (click)="acceptBooking(booking)">Accept</ion-button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar>
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<ion-button
+						id="chat"
+						color="success"
+						expand="block"
+						size="medium"
+						(click)="openChat()"
+					>Chat</ion-button>
+				</ion-col>
+				<ion-col>
+					<ion-button
+						id="edit"
+						color="warning"
+						expand="block"
+						size="medium"
+						(click)="routeToCreateRide(ride)"
+					>Edit</ion-button>
+				</ion-col>
+				<ion-col>
+					<ion-button
+						id="cancel"
+						color="danger"
+						expand="block"
+						size="medium"
+						(click)="cancelRide()"
+					>Cancel</ion-button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-toolbar>
+</ion-footer>

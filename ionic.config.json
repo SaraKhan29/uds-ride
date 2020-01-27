@@ -1,0 +1,7 @@
+{
+  "name": "uds-ride-yaml",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

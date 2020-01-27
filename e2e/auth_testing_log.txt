@@ -1,0 +1,311 @@
+C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml>npm run e2e
+
+> uds-ride-yaml@0.0.1 e2e C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml
+> ng e2e
+
+[00:59:48] I/update - chromedriver: file exists C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml\node_modules\protractor\node_modules\webdriver-manager\selenium\chromedriver_79.0.3945.36.zip
+[00:59:48] I/update - chromedriver: unzipping chromedriver_79.0.3945.36.zip
+[00:59:48] I/update - chromedriver: chromedriver_79.0.3945.36.exe up to date
+10% building 3/3 modules 0 activei ｢wds｣: Project is running at http://localhost:4200/webpack-dev-server/
+i ｢wds｣: webpack output is served from /
+i ｢wds｣: 404s will fallback to //index.html
+
+chunk {0} 0.js, 0.js.map () 13.2 kB  [rendered]
+chunk {1} 1.js, 1.js.map () 19.9 kB  [rendered]
+chunk {2} 2.js, 2.js.map () 17 kB  [rendered]
+chunk {3} 3.js, 3.js.map () 31.1 kB  [rendered]
+chunk {4} 4.js, 4.js.map () 31.1 kB  [rendered]
+chunk {5} 5.js, 5.js.map () 57.3 kB  [rendered]
+chunk {6} 6.js, 6.js.map () 56.1 kB  [rendered]
+chunk {7} 7.js, 7.js.map () 4.59 kB  [rendered]
+chunk {8} 8.js, 8.js.map () 4.64 kB  [rendered]
+chunk {9} 9.js, 9.js.map () 9.43 kB  [rendered]
+chunk {10} 10.js, 10.js.map () 9.97 kB  [rendered]
+chunk {11} 11.js, 11.js.map () 3.71 kB  [rendered]
+chunk {12} 12.js, 12.js.map () 3.7 kB  [rendered]
+chunk {13} 13.js, 13.js.map () 22.7 kB  [rendered]
+chunk {14} 14.js, 14.js.map () 22.8 kB  [rendered]
+chunk {15} 15.js, 15.js.map () 12 kB  [rendered]
+chunk {16} 16.js, 16.js.map () 11.6 kB  [rendered]
+chunk {17} 17.js, 17.js.map () 8.39 kB  [rendered]
+chunk {18} 18.js, 18.js.map () 8.52 kB  [rendered]
+chunk {19} 19.js, 19.js.map () 5.61 kB  [rendered]
+chunk {20} 20.js, 20.js.map () 5.61 kB  [rendered]
+chunk {21} 21.js, 21.js.map () 15.9 kB  [rendered]
+chunk {22} 22.js, 22.js.map () 66.2 kB  [rendered]
+chunk {23} 23.js, 23.js.map () 65.9 kB  [rendered]
+chunk {24} 24.js, 24.js.map () 19 kB  [rendered]
+chunk {25} 25.js, 25.js.map () 18.1 kB  [rendered]
+chunk {26} 26.js, 26.js.map () 3.42 kB  [rendered]
+chunk {27} 27.js, 27.js.map () 12.6 kB  [rendered]
+chunk {28} 28.js, 28.js.map () 12.6 kB  [rendered]
+chunk {29} 29.js, 29.js.map () 14.4 kB  [rendered]
+chunk {30} 30.js, 30.js.map () 14.3 kB  [rendered]
+chunk {31} 31.js, 31.js.map () 25.7 kB  [rendered]
+chunk {32} 32.js, 32.js.map () 25.6 kB  [rendered]
+chunk {33} 33.js, 33.js.map () 39.2 kB  [rendered]
+chunk {34} 34.js, 34.js.map () 42.8 kB  [rendered]
+chunk {35} 35.js, 35.js.map () 13.1 kB  [rendered]
+chunk {36} 36.js, 36.js.map () 12.8 kB  [rendered]
+chunk {37} 37.js, 37.js.map () 32 kB  [rendered]
+chunk {38} 38.js, 38.js.map () 32.1 kB  [rendered]
+chunk {39} 39.js, 39.js.map () 14.9 kB  [rendered]
+chunk {40} 40.js, 40.js.map () 14.9 kB  [rendered]
+chunk {41} 41.js, 41.js.map () 37.5 kB  [rendered]
+chunk {42} 42.js, 42.js.map () 20.5 kB  [rendered]
+chunk {43} 43.js, 43.js.map () 19.8 kB  [rendered]
+chunk {44} 44.js, 44.js.map () 12.6 kB  [rendered]
+chunk {45} 45.js, 45.js.map () 12.6 kB  [rendered]
+chunk {46} 46.js, 46.js.map () 12 kB  [rendered]
+chunk {47} 47.js, 47.js.map () 12.2 kB  [rendered]
+chunk {48} 48.js, 48.js.map () 20.5 kB  [rendered]
+chunk {49} 49.js, 49.js.map () 21.9 kB  [rendered]
+chunk {50} 50.js, 50.js.map () 18.3 kB  [rendered]
+chunk {51} 51.js, 51.js.map () 18.3 kB  [rendered]
+chunk {52} 52.js, 52.js.map () 12.6 kB  [rendered]
+chunk {53} 53.js, 53.js.map () 12.6 kB  [rendered]
+chunk {54} 54.js, 54.js.map () 6.48 kB  [rendered]
+chunk {55} 55.js, 55.js.map () 24.4 kB  [rendered]
+chunk {56} 56.js, 56.js.map () 26.3 kB  [rendered]
+chunk {57} 57.js, 57.js.map () 23.9 kB  [rendered]
+chunk {58} 58.js, 58.js.map () 15.4 kB  [rendered]
+chunk {59} 59.js, 59.js.map () 15.1 kB  [rendered]
+chunk {60} 60.js, 60.js.map () 21.9 kB  [rendered]
+chunk {61} 61.js, 61.js.map () 21.9 kB  [rendered]
+chunk {62} 62.js, 62.js.map () 36.6 kB  [rendered]
+chunk {63} 63.js, 63.js.map () 36.6 kB  [rendered]
+chunk {64} 64.js, 64.js.map () 10.7 kB  [rendered]
+chunk {65} 65.js, 65.js.map () 6.91 kB  [rendered]
+chunk {66} 66.js, 66.js.map () 6.91 kB  [rendered]
+chunk {67} 67.js, 67.js.map () 14.2 kB  [rendered]
+chunk {68} 68.js, 68.js.map () 14.4 kB  [rendered]
+chunk {69} 69.js, 69.js.map () 8.34 kB  [rendered]
+chunk {70} 70.js, 70.js.map () 1.84 kB  [rendered]
+chunk {71} 71.js, 71.js.map () 12.4 kB  [rendered]
+chunk {72} 72.js, 72.js.map () 12.4 kB  [rendered]
+chunk {73} 73.js, 73.js.map () 18.1 kB  [rendered]
+chunk {74} 74.js, 74.js.map () 18.7 kB  [rendered]
+chunk {75} 75.js, 75.js.map () 11 kB  [rendered]
+chunk {76} 76.js, 76.js.map () 10.9 kB  [rendered]
+chunk {77} 77.js, 77.js.map () 20.2 kB  [rendered]
+chunk {common} common.js, common.js.map (common) 24.8 kB  [rendered]
+chunk {core-js-js} core-js-js.js, core-js-js.js.map (core-js-js) 78.7 kB  [rendered]
+chunk {css-shim-206ea950-3169f23e-js} css-shim-206ea950-3169f23e-js.js, css-shim-206ea950-3169f23e-js.js.map (css-shim-206ea950-3169f23e-js) 21.9 kB  [rendered]
+chunk {dom-96781eef-a2fb04dd-js} dom-96781eef-a2fb04dd-js.js, dom-96781eef-a2fb04dd-js.js.map (dom-96781eef-a2fb04dd-js) 19.8 kB  [rendered]
+chunk {dom-js} dom-js.js, dom-js.js.map (dom-js) 20.2 kB  [rendered]
+chunk {focus-visible-70713a0c-js} focus-visible-70713a0c-js.js, focus-visible-70713a0c-js.js.map (focus-visible-70713a0c-js) 2.15 kB  [rendered]
+chunk {hardware-back-button-5afe3cb0-js} hardware-back-button-5afe3cb0-js.js, hardware-back-button-5afe3cb0-js.js.map (hardware-back-button-5afe3cb0-js) 2.06 kB  [rendered]
+chunk {index-69c37885-js} index-69c37885-js.js, index-69c37885-js.js.map (index-69c37885-js) 37.7 kB  [rendered]
+chunk {input-shims-a4fc53ac-js} input-shims-a4fc53ac-js.js, input-shims-a4fc53ac-js.js.map (input-shims-a4fc53ac-js) 13.5 kB  [rendered]
+chunk {ios-transition-504cdd09-js} ios-transition-504cdd09-js.js, ios-transition-504cdd09-js.js.map (ios-transition-504cdd09-js) 26.4 kB  [rendered]
+chunk {main} main.js, main.js.map (main) 235 kB [initial] [rendered]
+chunk {md-transition-fea2bbfb-js} md-transition-fea2bbfb-js.js, md-transition-fea2bbfb-js.js.map (md-transition-fea2bbfb-js) 3.91 kB  [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 290 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 9.84 kB [entry] [rendered]
+chunk {shadow-css-4889ae62-23996f3f-js} shadow-css-4889ae62-23996f3f-js.js, shadow-css-4889ae62-23996f3f-js.js.map (shadow-css-4889ae62-23996f3f-js) 14.8 kB  [rendered]
+chunk {status-tap-32c72c43-js} status-tap-32c72c43-js.js, status-tap-32c72c43-js.js.map (status-tap-32c72c43-js) 1.79 kB  [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 124 kB [initial] [rendered]
+chunk {swipe-back-35ad8e37-js} swipe-back-35ad8e37-js.js, swipe-back-35ad8e37-js.js.map (swipe-back-35ad8e37-js) 2.68 kB  [rendered]
+chunk {swiper-bundle-ccdaac54-js} swiper-bundle-ccdaac54-js.js, swiper-bundle-ccdaac54-js.js.map (swiper-bundle-ccdaac54-js) 176 kB  [rendered]
+chunk {tab1-tab1-module} tab1-tab1-module.js, tab1-tab1-module.js.map (tab1-tab1-module) 15.9 kB  [rendered]
+chunk {tab2-tab2-module} tab2-tab2-module.js, tab2-tab2-module.js.map (tab2-tab2-module) 10.5 kB  [rendered]
+chunk {tabs-tabs-module} tabs-tabs-module.js, tabs-tabs-module.js.map (tabs-tabs-module) 7.03 kB  [rendered]
+chunk {tap-click-ca00ce7f-js} tap-click-ca00ce7f-js.js, tap-click-ca00ce7f-js.js.map (tap-click-ca00ce7f-js) 6.37
+kB  [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 7.48 MB [initial] [rendered]
+Date: 2020-01-17T00:00:27.314Z - Hash: b5024c2e0292802ff464 - Time: 28228ms
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+i ｢wdm｣: Compiled successfully.
+[01:00:28] I/launcher - Running 1 instances of WebDriver
+[01:00:28] I/direct - Using ChromeDriver directly...
+
+DevTools listening on ws://127.0.0.1:59880/devtools/browser/6e343985-a3c2-41b5-856a-4317f13dbfe1
+Jasmine started
+
+  register Page Tests
+    × registering user s8osharo
+      - Expected 'The email address is already in use by another account.' to contain 'An email has been sent to your account for account verification. Kindly check your email.'.
+          at C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml\e2e\src\register.e2e-spec.ts:32:55
+          at C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml\node_modules\protractor\built\element.js:804:32
+          at ManagedPromise.invokeCallback_ (C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+          at TaskQueue.execute_ (C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+          at TaskQueue.executeNext_ (C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+          at C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml\node_modules\selenium-webdriver\lib\promise.js:2927:27
+          at C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml\node_modules\selenium-webdriver\lib\promise.js:668:7
+          at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    √ registering already registered user
+
+  Login Page Tests
+    √ non-verified user not logged in
+    √ verified user wrong password not logged in
+    √ verified user logged in
+
+  ForgotPassword Page Tests
+    √ forgot password for invalid user.
+    √ receiving forgot password email for valid user.
+
+**************************************************
+*                    Failures                    *
+**************************************************
+
+1) register Page Tests registering user s8osharo
+  - Expected 'The email address is already in use by another account.' to contain 'An email has been sent to your
+account for account verification. Kindly check your email.'.
+
+Executed 7 of 7 specs (1 FAILED) in 2 mins.
+[01:02:36] I/launcher - 0 instance(s) of WebDriver still running
+[01:02:36] I/launcher - chrome #01 failed 1 test(s)
+[01:02:36] I/launcher - overall: 1 failed spec(s)
+[01:02:36] E/launcher - Process exited with error code 1
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! uds-ride-yaml@0.0.1 e2e: `ng e2e`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the uds-ride-yaml@0.0.1 e2e script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\Osama\AppData\Roaming\npm-cache\_logs\2020-01-17T00_02_36_872Z-debug.log
+
+C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml>npm run e2e
+
+> uds-ride-yaml@0.0.1 e2e C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml
+> ng e2e
+
+[01:03:41] I/update - chromedriver: file exists C:\Users\Osama\Desktop\SE_project\dev\project16\uds-ride-yaml\node_modules\protractor\node_modules\webdriver-manager\selenium\chromedriver_79.0.3945.36.zip
+[01:03:41] I/update - chromedriver: unzipping chromedriver_79.0.3945.36.zip
+[01:03:41] I/update - chromedriver: chromedriver_79.0.3945.36.exe up to date
+10% building 3/3 modules 0 activei ｢wds｣: Project is running at http://localhost:4200/webpack-dev-server/
+i ｢wds｣: webpack output is served from /
+i ｢wds｣: 404s will fallback to //index.html
+
+chunk {0} 0.js, 0.js.map () 13.2 kB  [rendered]
+chunk {1} 1.js, 1.js.map () 19.9 kB  [rendered]
+chunk {2} 2.js, 2.js.map () 17 kB  [rendered]
+chunk {3} 3.js, 3.js.map () 31.1 kB  [rendered]
+chunk {4} 4.js, 4.js.map () 31.1 kB  [rendered]
+chunk {5} 5.js, 5.js.map () 57.3 kB  [rendered]
+chunk {6} 6.js, 6.js.map () 56.1 kB  [rendered]
+chunk {7} 7.js, 7.js.map () 4.59 kB  [rendered]
+chunk {8} 8.js, 8.js.map () 4.64 kB  [rendered]
+chunk {9} 9.js, 9.js.map () 9.43 kB  [rendered]
+chunk {10} 10.js, 10.js.map () 9.97 kB  [rendered]
+chunk {11} 11.js, 11.js.map () 3.71 kB  [rendered]
+chunk {12} 12.js, 12.js.map () 3.7 kB  [rendered]
+chunk {13} 13.js, 13.js.map () 22.7 kB  [rendered]
+chunk {14} 14.js, 14.js.map () 22.8 kB  [rendered]
+chunk {15} 15.js, 15.js.map () 12 kB  [rendered]
+chunk {16} 16.js, 16.js.map () 11.6 kB  [rendered]
+chunk {17} 17.js, 17.js.map () 8.39 kB  [rendered]
+chunk {18} 18.js, 18.js.map () 8.52 kB  [rendered]
+chunk {19} 19.js, 19.js.map () 5.61 kB  [rendered]
+chunk {20} 20.js, 20.js.map () 5.61 kB  [rendered]
+chunk {21} 21.js, 21.js.map () 15.9 kB  [rendered]
+chunk {22} 22.js, 22.js.map () 66.2 kB  [rendered]
+chunk {23} 23.js, 23.js.map () 65.9 kB  [rendered]
+chunk {24} 24.js, 24.js.map () 19 kB  [rendered]
+chunk {25} 25.js, 25.js.map () 18.1 kB  [rendered]
+chunk {26} 26.js, 26.js.map () 3.42 kB  [rendered]
+chunk {27} 27.js, 27.js.map () 12.6 kB  [rendered]
+chunk {28} 28.js, 28.js.map () 12.6 kB  [rendered]
+chunk {29} 29.js, 29.js.map () 14.4 kB  [rendered]
+chunk {30} 30.js, 30.js.map () 14.3 kB  [rendered]
+chunk {31} 31.js, 31.js.map () 25.7 kB  [rendered]
+chunk {32} 32.js, 32.js.map () 25.6 kB  [rendered]
+chunk {33} 33.js, 33.js.map () 39.2 kB  [rendered]
+chunk {34} 34.js, 34.js.map () 42.8 kB  [rendered]
+chunk {35} 35.js, 35.js.map () 13.1 kB  [rendered]
+chunk {36} 36.js, 36.js.map () 12.8 kB  [rendered]
+chunk {37} 37.js, 37.js.map () 32 kB  [rendered]
+chunk {38} 38.js, 38.js.map () 32.1 kB  [rendered]
+chunk {39} 39.js, 39.js.map () 14.9 kB  [rendered]
+chunk {40} 40.js, 40.js.map () 14.9 kB  [rendered]
+chunk {41} 41.js, 41.js.map () 37.5 kB  [rendered]
+chunk {42} 42.js, 42.js.map () 20.5 kB  [rendered]
+chunk {43} 43.js, 43.js.map () 19.8 kB  [rendered]
+chunk {44} 44.js, 44.js.map () 12.6 kB  [rendered]
+chunk {45} 45.js, 45.js.map () 12.6 kB  [rendered]
+chunk {46} 46.js, 46.js.map () 12 kB  [rendered]
+chunk {47} 47.js, 47.js.map () 12.2 kB  [rendered]
+chunk {48} 48.js, 48.js.map () 20.5 kB  [rendered]
+chunk {49} 49.js, 49.js.map () 21.9 kB  [rendered]
+chunk {50} 50.js, 50.js.map () 18.3 kB  [rendered]
+chunk {51} 51.js, 51.js.map () 18.3 kB  [rendered]
+chunk {52} 52.js, 52.js.map () 12.6 kB  [rendered]
+chunk {53} 53.js, 53.js.map () 12.6 kB  [rendered]
+chunk {54} 54.js, 54.js.map () 6.48 kB  [rendered]
+chunk {55} 55.js, 55.js.map () 24.4 kB  [rendered]
+chunk {56} 56.js, 56.js.map () 26.3 kB  [rendered]
+chunk {57} 57.js, 57.js.map () 23.9 kB  [rendered]
+chunk {58} 58.js, 58.js.map () 15.4 kB  [rendered]
+chunk {59} 59.js, 59.js.map () 15.1 kB  [rendered]
+chunk {60} 60.js, 60.js.map () 21.9 kB  [rendered]
+chunk {61} 61.js, 61.js.map () 21.9 kB  [rendered]
+chunk {62} 62.js, 62.js.map () 36.6 kB  [rendered]
+chunk {63} 63.js, 63.js.map () 36.6 kB  [rendered]
+chunk {64} 64.js, 64.js.map () 10.7 kB  [rendered]
+chunk {65} 65.js, 65.js.map () 6.91 kB  [rendered]
+chunk {66} 66.js, 66.js.map () 6.91 kB  [rendered]
+chunk {67} 67.js, 67.js.map () 14.2 kB  [rendered]
+chunk {68} 68.js, 68.js.map () 14.4 kB  [rendered]
+chunk {69} 69.js, 69.js.map () 8.34 kB  [rendered]
+chunk {70} 70.js, 70.js.map () 1.84 kB  [rendered]
+chunk {71} 71.js, 71.js.map () 12.4 kB  [rendered]
+chunk {72} 72.js, 72.js.map () 12.4 kB  [rendered]
+chunk {73} 73.js, 73.js.map () 18.1 kB  [rendered]
+chunk {74} 74.js, 74.js.map () 18.7 kB  [rendered]
+chunk {75} 75.js, 75.js.map () 11 kB  [rendered]
+chunk {76} 76.js, 76.js.map () 10.9 kB  [rendered]
+chunk {77} 77.js, 77.js.map () 20.2 kB  [rendered]
+chunk {common} common.js, common.js.map (common) 24.8 kB  [rendered]
+chunk {core-js-js} core-js-js.js, core-js-js.js.map (core-js-js) 78.7 kB  [rendered]
+chunk {css-shim-206ea950-3169f23e-js} css-shim-206ea950-3169f23e-js.js, css-shim-206ea950-3169f23e-js.js.map (css-shim-206ea950-3169f23e-js) 21.9 kB  [rendered]
+chunk {dom-96781eef-a2fb04dd-js} dom-96781eef-a2fb04dd-js.js, dom-96781eef-a2fb04dd-js.js.map (dom-96781eef-a2fb04dd-js) 19.8 kB  [rendered]
+chunk {dom-js} dom-js.js, dom-js.js.map (dom-js) 20.2 kB  [rendered]
+chunk {focus-visible-70713a0c-js} focus-visible-70713a0c-js.js, focus-visible-70713a0c-js.js.map (focus-visible-70713a0c-js) 2.15 kB  [rendered]
+chunk {hardware-back-button-5afe3cb0-js} hardware-back-button-5afe3cb0-js.js, hardware-back-button-5afe3cb0-js.js.map (hardware-back-button-5afe3cb0-js) 2.06 kB  [rendered]
+chunk {index-69c37885-js} index-69c37885-js.js, index-69c37885-js.js.map (index-69c37885-js) 37.7 kB  [rendered]
+chunk {input-shims-a4fc53ac-js} input-shims-a4fc53ac-js.js, input-shims-a4fc53ac-js.js.map (input-shims-a4fc53ac-js) 13.5 kB  [rendered]
+chunk {ios-transition-504cdd09-js} ios-transition-504cdd09-js.js, ios-transition-504cdd09-js.js.map (ios-transition-504cdd09-js) 26.4 kB  [rendered]
+chunk {main} main.js, main.js.map (main) 235 kB [initial] [rendered]
+chunk {md-transition-fea2bbfb-js} md-transition-fea2bbfb-js.js, md-transition-fea2bbfb-js.js.map (md-transition-fea2bbfb-js) 3.91 kB  [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 290 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 9.84 kB [entry] [rendered]
+chunk {shadow-css-4889ae62-23996f3f-js} shadow-css-4889ae62-23996f3f-js.js, shadow-css-4889ae62-23996f3f-js.js.map (shadow-css-4889ae62-23996f3f-js) 14.8 kB  [rendered]
+chunk {status-tap-32c72c43-js} status-tap-32c72c43-js.js, status-tap-32c72c43-js.js.map (status-tap-32c72c43-js) 1.79 kB  [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 124 kB [initial] [rendered]
+chunk {swipe-back-35ad8e37-js} swipe-back-35ad8e37-js.js, swipe-back-35ad8e37-js.js.map (swipe-back-35ad8e37-js) 2.68 kB  [rendered]
+chunk {swiper-bundle-ccdaac54-js} swiper-bundle-ccdaac54-js.js, swiper-bundle-ccdaac54-js.js.map (swiper-bundle-ccdaac54-js) 176 kB  [rendered]
+chunk {tab1-tab1-module} tab1-tab1-module.js, tab1-tab1-module.js.map (tab1-tab1-module) 15.9 kB  [rendered]
+chunk {tab2-tab2-module} tab2-tab2-module.js, tab2-tab2-module.js.map (tab2-tab2-module) 10.5 kB  [rendered]
+chunk {tabs-tabs-module} tabs-tabs-module.js, tabs-tabs-module.js.map (tabs-tabs-module) 7.03 kB  [rendered]
+chunk {tap-click-ca00ce7f-js} tap-click-ca00ce7f-js.js, tap-click-ca00ce7f-js.js.map (tap-click-ca00ce7f-js) 6.37
+kB  [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 7.48 MB [initial] [rendered]
+Date: 2020-01-17T00:04:16.355Z - Hash: b5024c2e0292802ff464 - Time: 25629ms
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+i ｢wdm｣: Compiled successfully.
+[01:04:17] I/launcher - Running 1 instances of WebDriver
+[01:04:17] I/direct - Using ChromeDriver directly...
+[5844:8796:0117/010419.128:ERROR:upgrade_util_win.cc(73)] IProcessLauncher::LaunchCmdElevated failed; hr = 80040e01
+
+DevTools listening on ws://127.0.0.1:60333/devtools/browser/937995c9-8bc0-4b1d-a49a-9d5b69fb5080
+Jasmine started
+
+  register Page Tests
+    √ registering user s8osharo
+    √ registering already registered user
+
+  Login Page Tests
+    √ non-verified user not logged in
+    √ verified user wrong password not logged in
+    √ verified user logged in
+
+  ForgotPassword Page Tests
+    √ forgot password for invalid user.
+    √ receiving forgot password email for valid user.
+
+Executed 7 of 7 specs SUCCESS in 2 mins.
+[01:06:21] I/launcher - 0 instance(s) of WebDriver still running
+[01:06:21] I/launcher - chrome #01 passed

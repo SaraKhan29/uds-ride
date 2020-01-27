@@ -1,0 +1,55 @@
+<ion-content fullscreen class="bg-cstm">
+	<div class="wrapper-logo-login-cstm">
+		<img src="../../assets/img/logo.png" class="logo-login-cstm">
+	</div>
+	<ion-slides>
+		<ion-slide>
+			<div class="logo-login-text-cstm">
+				<h2>Life ain't always beautiful, but it's a beautiful ride.</h2>
+			</div>
+
+			<div class="wrapper-slider-knobs-cstm">
+				<ion-icon name="radio-button-on" class="slider-knobs-cstm"></ion-icon>
+				<ion-icon name="radio-button-off" class="slider-knobs-cstm"></ion-icon>
+				<ion-icon name="radio-button-off" class="slider-knobs-cstm"></ion-icon>
+			</div>
+		</ion-slide>
+
+		<ion-slide>
+			<div class="logo-login-text-cstm">
+				<h2>Let's Drive Together.</h2>
+			</div>
+
+			<div class="wrapper-slider-knobs-cstm">
+				<ion-icon name="radio-button-off" class="slider-knobs-cstm"></ion-icon>
+				<ion-icon name="radio-button-on" class="slider-knobs-cstm"></ion-icon>
+
+				<ion-icon name="radio-button-off" class="slider-knobs-cstm"></ion-icon>
+			</div>
+		</ion-slide>
+
+		<ion-slide>
+			<div class="logo-login-text-cstm">
+				<h2>Ride higher in life unto the higher life.</h2>
+			</div>
+
+			<div class="wrapper-slider-knobs-cstm">
+
+				<ion-icon name="radio-button-off" class="slider-knobs-cstm"></ion-icon>
+				<ion-icon name="radio-button-off" class="slider-knobs-cstm"></ion-icon>
+				<ion-icon name="radio-button-on" class="slider-knobs-cstm"></ion-icon>
+			</div>
+		</ion-slide>
+	</ion-slides>
+
+	<div class="wrapper-logo-actions-cstm" *ngIf="!loggingIn">
+		<ion-button color="light" mode="ios" expand="block" href="/login">Login</ion-button>
+		<ion-button color="light" mode="ios" expand="block" fill="outline" href="register">Register</ion-button>
+	</div>
+
+	<div class="wrapper-loggingin-cstm" *ngIf="loggingIn">
+		<ion-spinner color="light"></ion-spinner>
+		<br>
+		<ion-label color="light">Logging in...</ion-label>
+	</div>
+</ion-content>
